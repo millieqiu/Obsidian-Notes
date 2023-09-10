@@ -29,3 +29,6 @@ git push origin main
 
 ### 什麼是 Git？
 Git 是一種分散式的版本控制系統。
+
+![[terminal.png]]
+
