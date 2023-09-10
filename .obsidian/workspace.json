@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1. Pyramius/1.2. Learning/git.md",
+                "file": "_Inbox/曾經踩過的坑.md",
                 "mode": "source",
                 "source": false
               }
@@ -116,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1. Pyramius/1.2. Learning/git.md",
+                "file": "_Inbox/曾經踩過的坑.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -133,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1. Pyramius/1.2. Learning/git.md",
+                "file": "_Inbox/曾經踩過的坑.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1. Pyramius/1.2. Learning/git.md"
+                "file": "_Inbox/曾經踩過的坑.md"
               }
             }
           }
@@ -168,12 +168,12 @@
       "workspaces:管理工作區配置": false
     }
   },
-  "active": "b6e1c49579369639",
+  "active": "e9b61910ad039938",
   "lastOpenFiles": [
+    "1. Pyramius/1.2. Learning/git.md",
     "_root/terminal.png",
     "_Inbox/曾經踩過的坑.md",
     "_root/Windows Credentials.png",
-    "1. Pyramius/1.2. Learning/git.md",
     "_Inbox/Test.md",
     "_Inbox/2023-08-10.md",
     "_Inbox/零散筆記.md",
@@ -212,7 +212,6 @@
     "2. Frontend",
     "_Inbox",
     "_root/this-obj-method.png",
-    "_root/js-runtime.png",
     "_root",
     "1. Pyramius",
     "Untitled.canvas"
