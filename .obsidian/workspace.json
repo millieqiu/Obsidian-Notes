@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_Inbox/Test Git.md",
+                "file": "_Inbox/Test.md",
                 "mode": "source",
                 "source": false
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_Inbox/Test Git.md",
+                "file": "_Inbox/Test.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -146,7 +146,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_Inbox/Test Git.md",
+                "file": "_Inbox/Test.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_Inbox/Test Git.md"
+                "file": "_Inbox/Test.md"
               }
             }
           }
@@ -184,7 +184,7 @@
   "active": "96aa0b5e17d741c0",
   "lastOpenFiles": [
     "_Inbox/曾經踩過的坑.md",
-    "_Inbox/Test Git.md",
+    "_Inbox/Test.md",
     "_Inbox/2023-08-10.md",
     "_Inbox/零散筆記.md",
     "1. Pyramius/1.3. Projects/Untitled.md",
