@@ -27,3 +27,5 @@ git push origin main
 > [Git & GitHub 教學手冊](https://w3c.hexschool.com/git/cfdbd310)
 > [【Git】從零開始學習 Git - 30 天的學習筆記 - 鐵人賽系列文](https://ithelp.ithome.com.tw/users/20141010/ironman/4499)
 
+### 什麼是 Git？
+Git 是一種分散式的版本控制系統。
