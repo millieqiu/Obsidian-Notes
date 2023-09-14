@@ -20,6 +20,16 @@
             }
           },
           {
+            "id": "909707761707cafd",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.4.11"
+              }
+            }
+          },
+          {
             "id": "9d12583aacd6eca3",
             "type": "leaf",
             "state": {
@@ -31,7 +41,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -148,6 +159,16 @@
                 "file": "_Inbox/曾經踩過的坑.md"
               }
             }
+          },
+          {
+            "id": "3852863e124e3d97",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
+              }
+            }
           }
         ],
         "currentTab": 2
@@ -168,7 +189,7 @@
       "workspaces:管理工作區配置": false
     }
   },
-  "active": "e9b61910ad039938",
+  "active": "909707761707cafd",
   "lastOpenFiles": [
     "2. Frontend/JavaScript 基礎.md",
     "_Inbox/曾經踩過的坑.md",
