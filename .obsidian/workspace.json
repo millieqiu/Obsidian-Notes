@@ -20,16 +20,6 @@
             }
           },
           {
-            "id": "d4f3362bbee8b7ab",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.4.12"
-              }
-            }
-          },
-          {
             "id": "9d12583aacd6eca3",
             "type": "leaf",
             "state": {
@@ -41,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -189,7 +178,7 @@
       "workspaces:管理工作區配置": false
     }
   },
-  "active": "d4f3362bbee8b7ab",
+  "active": "e9b61910ad039938",
   "lastOpenFiles": [
     "_Inbox/零散筆記.md",
     "_Inbox/曾經踩過的坑.md",
