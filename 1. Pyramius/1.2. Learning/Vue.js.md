@@ -2,6 +2,8 @@
 使用框架的好處：雙向綁定
 >雙向綁定：在表單的輸入元素上 (input, select, textarea) 跟資料進行綁定
 
+在 Vue3 也有為 v-model 增添不一樣的屬性，例如 `v-model.trim` 可以去除前面的空白字元； `v-model.lazy` 可以在輸入完畢才會將內容儲存起來，換句話說就是將游標跳出，`input` 輸入框才會將值寫入到變數內。
+
 v-model
 
 Udemy 2-5節
