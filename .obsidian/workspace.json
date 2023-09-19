@@ -13,19 +13,21 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1. Pyramius/1.2. Learning/Vue.js.md",
+                "file": "1. Pyramius/1.3. Projects/Untitled.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "22eb7456d67cedc8",
+            "id": "dfb81e63c6e665c1",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.4.13"
+                "file": "_Inbox/從零開始學 Vue3.md",
+                "mode": "source",
+                "source": false
               }
             }
           },
@@ -72,7 +74,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#front-end",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -127,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1. Pyramius/1.2. Learning/Vue.js.md",
+                "file": "_Inbox/從零開始學 Vue3.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -144,7 +146,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1. Pyramius/1.2. Learning/Vue.js.md",
+                "file": "_Inbox/從零開始學 Vue3.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -156,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1. Pyramius/1.2. Learning/Vue.js.md"
+                "file": "_Inbox/從零開始學 Vue3.md"
               }
             }
           },
@@ -189,17 +191,19 @@
       "workspaces:管理工作區配置": false
     }
   },
-  "active": "22eb7456d67cedc8",
+  "active": "dfb81e63c6e665c1",
   "lastOpenFiles": [
+    "1. Pyramius/1.3. Projects/Untitled.md",
+    "_Inbox/從零開始學 Vue3.md",
+    "2. Frontend/Advanced Functions.md",
+    "2. Frontend/迴圈 (Modern JavaScript).md",
+    "1. Pyramius/1.2. Learning/Vue.js.md",
     "1. Pyramius/1.2. Learning/Promise.md",
     "1. Pyramius/1.2. Learning/SASS.md",
-    "1. Pyramius/1.2. Learning/Vue.js.md",
-    "1. Pyramius/1.3. Projects/Untitled.md",
     "README.md",
     "_Inbox/曾經踩過的坑.md",
     "_Inbox/零散筆記.md",
     "2. Frontend/JavaScript 基礎.md",
-    "2. Frontend/迴圈 (Modern JavaScript).md",
     "1. Pyramius/1.2. Learning/git.md",
     "_root/terminal.png",
     "_root/Windows Credentials.png",
@@ -212,7 +216,6 @@
     "4. Blog/15th 鐵人賽配置.md",
     "4. Blog",
     "2. Frontend/JavaScript 運作原理 🌤.md",
-    "2. Frontend/Advanced Functions.md",
     "_root/udemy.png",
     "2. Frontend/Strings (Modern JavaScript).md",
     "1. Pyramius/1.1. Training",

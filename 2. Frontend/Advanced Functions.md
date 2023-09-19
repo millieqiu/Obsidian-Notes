@@ -73,7 +73,7 @@ A function that **receives** another functions as an argument, that **returns** 
 
 ## Callback function
 看自己的文章：
->[Daily notes #2：什麼是 Callback function？](https://millieee-blog.coderbridge.io/2023/08/31/what-is-callback-function/)
+>[Daily notes#2：什麼是 Callback function？](https://millieee-blog.coderbridge.io/2023/08/31/what-is-callback-function/)
 
 
 ## Functions returning functions
