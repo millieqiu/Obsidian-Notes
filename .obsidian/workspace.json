@@ -20,6 +20,16 @@
             }
           },
           {
+            "id": "22eb7456d67cedc8",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.4.13"
+              }
+            }
+          },
+          {
             "id": "9d12583aacd6eca3",
             "type": "leaf",
             "state": {
@@ -31,7 +41,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -178,7 +189,7 @@
       "workspaces:管理工作區配置": false
     }
   },
-  "active": "e9b61910ad039938",
+  "active": "22eb7456d67cedc8",
   "lastOpenFiles": [
     "1. Pyramius/1.2. Learning/Promise.md",
     "1. Pyramius/1.2. Learning/SASS.md",
