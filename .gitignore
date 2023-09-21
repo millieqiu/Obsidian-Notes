@@ -1,5 +1,7 @@
-.git
+.git/
 
-.obsidian
+.obsidian/
 
 .gitattributes
+
+.DS_Store
