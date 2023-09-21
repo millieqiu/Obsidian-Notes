@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_Inbox/從零開始學 Vue3.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_Inbox/從零開始學 Vue3.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -146,7 +146,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_Inbox/從零開始學 Vue3.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_Inbox/從零開始學 Vue3.md"
+                "file": "README.md"
               }
             }
           },
@@ -193,8 +193,8 @@
   },
   "active": "dfb81e63c6e665c1",
   "lastOpenFiles": [
-    "2. Frontend/JavaScript 基礎.md",
     "_Inbox/從零開始學 Vue3.md",
+    "2. Frontend/JavaScript 基礎.md",
     "1. Pyramius/1.3. Projects/Untitled.md",
     "2. Frontend/Advanced Functions.md",
     "2. Frontend/迴圈 (Modern JavaScript).md",
