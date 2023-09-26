@@ -45,6 +45,13 @@ document.querySelector 只會選取第一個符合的元素，如果要選取多
 > `document.querySelector` 大多在選取時，大多都是採用 CSS 的選取方式，因此 `document.querySelector` 會需要先解析 CSS 的選取方式，然後再去選取元素，而 `document.getElementById` 則是直接依照 ID 選取元素，所以在效能上就會比較好。
 
 
+# Functions
+- parameter
+  指會帶入函式的變數名稱。
+- argument
+  實際帶入函式的「值」。
+![[parameter&argumenet.png]]
+
 # Arrow Function 箭頭函式
 ###### Arrow Functions 小檔案
 ---
