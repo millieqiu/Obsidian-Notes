@@ -1,3 +1,65 @@
+# 基本語法
+
+### v-model
+實現資料雙向綁定，有以下幾種較常見的修飾符：
+
+- `lazy`：轉為 change 事件後同步
+  編輯資料時不會一起更動值，等到輸入完畢離開 input 後才會變動
+```html
+<!-- HTML -->
+<div id="app">
+    <input type="text" v-model.lazy="message">
+    {{ message }}
+</div>
+```
+
+- `number`：改變 input 資料型別 typeof
+  1. `{{ typeof 資料名稱 }}` 可取得該筆資料的資料型別
+  2. 加上修飾符 .number 才能改變其資料型態為 number，否則儘管輸入數字也會是 string
+```html
+<!-- HTML -->
+<div id="app">
+    <input type="text" v-model="message">
+    <input type="text" v-model.number="message">
+    <input type="number" v-model="message">
+    <input type="number" v-model.number="message">
+    {{ message }}
+    {{ typeof message }}
+</div>
+```
+
+```javascript
+<script>
+	// 假設值為 123456：
+    /*
+    	欄位一：string
+    	欄位二：number
+    	欄位三：string
+    	欄位四：number
+    */
+</script>
+```
+
+- `trim`：去掉頭尾空格
+```html
+<!-- HTML -->
+<div id="app">
+    <input type="text" v-model="message">
+    <input type="text" v-model.trim="message">
+    首{{ message }}尾
+</div>
+```
+
+```javascript
+<script>
+	// 假設值為 " 哈囉 "：
+    /*
+    	欄位一：首 哈囉 尾
+    	欄位二：首哈囉尾
+    */
+</script>
+```
+
 # Optional API
 ## Vue 元件的生命週期
 
