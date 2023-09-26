@@ -46,3 +46,5 @@ setup() {
 -  modelValue
   當在自訂 component 使用 v-model 時，component 接收一個 modelValue 的值，然後透過觸發 `update:modelValue` 事件來更新該值。
 
+### script setup
+`script setup` 是 Vue 3 中所提供的語法糖，在 script 標籤加上 setup 就可以了，作用如 `setup()`一樣，所有的變數、函式 都可以直接給模板（template）使用，不需要再 `return`。
