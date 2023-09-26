@@ -60,6 +60,40 @@
 </script>
 ```
 
+### v-on
+事件綁定。
+
+常用修飾符：
+- `stop`：阻止點擊事件繼續向上傳播
+```html
+<div class="one" @click="out">
+    <button @click.stop="inside">內層</button>
+</div>
+```
+
+```javascript
+var vm = new Vue({
+  el: '#app',
+  data: { 
+    
+     },
+  methods:{
+    //stop 修飾符
+    out(){
+      console.log("外層");
+    },
+    inside(){
+      console.log("內層");
+    },
+  },
+})
+
+// 印出結果：
+// 內層
+```
+
+- `prevent`：取消預設行為，類似 JavaScript 中的 `event.preventDefault()`。
+
 # Optional API
 ## Vue 元件的生命週期
 
