@@ -46,9 +46,9 @@ document.querySelector 只會選取第一個符合的元素，如果要選取多
 
 
 # Functions
-- parameter
+-  parameter
   指會帶入函式的變數名稱。
-- argument
+-  argument
   實際帶入函式的「值」。
 ![[parameter&argumenet.png]]
 
