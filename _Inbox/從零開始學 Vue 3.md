@@ -15,7 +15,7 @@
 
 - `number`：改變 input 資料型別 typeof
   1. `{{ typeof 資料名稱 }}` 可取得該筆資料的資料型別
-  2. 加上修飾符 .number 才能改變其資料型態為 number，否則儘管輸入數字也會是 string
+  2. 加上修飾符 `.number` 才能改變其資料型態為 number，否則儘管輸入數字也會是 string
 ```html
 <!-- HTML -->
 <div id="app">
