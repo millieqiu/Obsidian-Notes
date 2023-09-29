@@ -10,5 +10,4 @@
   - scripts -> JS 檔案，大多用來操控使用者互動效果
   - layouts -> 用來設計排版、網頁布局
 - package.json
-- tsconfig.json
 
