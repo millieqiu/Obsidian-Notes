@@ -94,10 +94,20 @@ var vm = new Vue({
 
 - `prevent`：取消預設行為，類似 JavaScript 中的 `event.preventDefault()`。
 
-# Optional API
-## Vue 元件的生命週期
+# Component（元件基礎）
 
-## 基本結構
+### slot（插槽）
+要在父子元件之間傳遞**變數**或內容的時候，我們可以使用 props，但如果想要傳遞進去的是一段 template 片段，就要使用到 slot。
+
+![[slot.png]]
+如上述例子，Vue 會在子元件的 slot 插入 textNode (#text)，渲染出 `<button>Click Me<button>`。這麼做的好處可以==讓元件變得更彈性==，透過傳入 template 來客製部份元件，所以實際上用到 v-slot 的狀況，通常不會只傳入簡單的文字內容。
+
+
+
+# Optional API
+### Vue 元件的生命週期
+
+### 基本結構
 ```javascript
 export default {
   props: {},
