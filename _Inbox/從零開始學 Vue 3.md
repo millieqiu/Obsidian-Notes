@@ -97,10 +97,54 @@ var vm = new Vue({
 # Component（元件基礎）
 
 ### slot（插槽）
-要在父子元件之間傳遞**變數**或內容的時候，我們可以使用 props，但如果想要傳遞進去的是一段 template 片段，就要使用到 slot。
+Slot 是一種內容分發（content distribution）的 API，中文翻譯為插槽，適合用在結構比較複雜，元件內容可以重複使用的地方。簡單說就是==在 component 中可以預留空間，在父層再把內容放進去==。
+要在父子元件之間傳遞變數或內容的時候，我們可以使用 props，但如果想要傳遞進去的是一段 template 片段，就要使用到 slot。
 
 ![[slot.png]]
 如上述例子，Vue 會在子元件的 slot 插入 textNode (#text)，渲染出 `<button>Click Me<button>`。這麼做的好處可以==讓元件變得更彈性==，透過傳入 template 來客製部份元件，所以實際上用到 v-slot 的狀況，通常不會只傳入簡單的文字內容。
+
+#### 具名插槽
+有時候我們會遇到一個元件裡有好幾個 slot 出口的狀況。以下面的 `<BaseLayout>` 為例：
+```html
+<!-- component 子層 -->
+<div class="container">
+  <header>
+    <!-- 標題內容放這裡 -->
+  </header>
+  <main>
+    <!-- 主要内容放這裡 -->
+  </main>
+  <footer>
+    <!-- 底部内容放這裡 -->
+  </footer>
+</div>
+```
+對於這種場景，`<slot>` 元素可以有一個特殊的屬性「`name`」，用來給各個插槽分配唯一的 ID，以確認每一處要渲染的內容。
+```html
+<!-- component 子層 -->
+<div class="container">
+  <header>
+    <slot name="header"></slot>
+  </header>
+  <main>
+    <slot></slot>
+  </main>
+  <footer>
+    <slot name="footer"></slot>
+  </footer>
+</div>
+```
+這類具有 `name` 屬性的插槽則稱為「具名插槽」。要為具名插槽傳入內容，我們需要在 `template` 標籤上運用 `v-slot` 指令：
+```html
+<!-- App 父層引用元件 -->
+<BaseLayout>
+  <template v-slot:header>
+    This is a header
+  </template>
+</BaseLayout>
+```
+![[named-slot.png]]
+**要注意 `v-slot` 只能添加在 `<template>` 上**。
 
 
 
