@@ -153,6 +153,14 @@ Slot 是一種內容分發（content distribution）的 API，中文翻譯為插
 ### 狀態保留 keep-alive
 `<keep-alive>` 是 Vue 的內建元件，它的功能是在多個元件動態切換時暫存狀態。
 
+在預設情況下，一個元件被替換掉後就會變銷毀，導致它丟失所有已變化的狀態，而當這個元件再次被顯示時，只會創建帶有初始狀態的新實例。
+若我們希望元件被切換走後還能保留剛才被改變的狀態，就可以使用 `<keep-alive>` 來達成，將動態組件包裝起來：
+```vue
+  <keep-alive>
+    <ComponentThree v-if="tab === 'tab3'" />
+  </keep-alive>
+```
+
 
 # Optional API
 ### Vue 元件的生命週期
@@ -204,11 +212,13 @@ export default {
 }
 ```
 
+修改 `ref` 的值時必須使用 `.value`，因為 `ref` 會將該變數轉換成一個響應式的物件(意指 Proxy 物件)，因此若要修改的話則必須透過 `.value` 的方式。
+
 -  modelValue
   當在自訂 component 使用 v-model 時，component 接收一個 modelValue 的值，然後透過觸發 `update:modelValue` 事件來更新該值。
 
 ### Reactive
-如果要宣告結構變數的話就必須要使用 `reactive` ，然後將變數放在裡面，而初始化的時候就不用 `ref` 了。而這個 `reactive` 也必須要 import 才可以使用。
+如果要宣告結構變數的話就必須要使用 `reactive` ，==針對物件或陣列做雙向綁定監聽==，然後將變數放在裡面，而初始化的時候就不用 `ref` 了。而這個 `reactive` 也必須要 import 才可以使用。
 ``` html
 <template>
   {{ user.id }} {{ user.name }}
@@ -238,5 +248,13 @@ export default {
 </script>
 ```
 
+### toRef
+
+### toRefs
+
+
 ### script setup
 `script setup` 是 Vue 3 中所提供的語法糖，在 script 標籤加上 setup 就可以了，作用如 `setup()`一樣，所有的變數、函式 都可以直接給模板（template）使用，不需要再 `return`。
+
+### 函式
+函式的宣告直接宣告在 `setup() {}` 即可。
