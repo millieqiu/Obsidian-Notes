@@ -146,6 +146,12 @@ Slot 是一種內容分發（content distribution）的 API，中文翻譯為插
 ![[named-slot.png]]
 **要注意 `v-slot` 只能添加在 `<template>` 上**。
 
+### 動態元件
+有些場景會需要在兩個元件間來回切換，例如常見的 Tab 介面。
+
+
+### 狀態保留 keep-alive
+`<keep-alive>` 是 Vue 的內建元件，它的功能是在多個元件動態切換時暫存狀態。
 
 
 # Optional API
