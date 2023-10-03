@@ -168,6 +168,8 @@ Slot 是一種內容分發（content distribution）的 API，中文翻譯為插
 Vue 實體的生命週期為：建立 -> 掛載 -> 更新 -> 銷毀移除
 
 
+
+
 ### 基本結構
 ```javascript
 export default {
