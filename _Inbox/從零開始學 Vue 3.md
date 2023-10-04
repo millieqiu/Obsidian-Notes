@@ -162,13 +162,13 @@ Slot 是一種內容分發（content distribution）的 API，中文翻譯為插
 ```
 
 
-# Optional API
-### Vue 元件的生命週期
+# Vue 的生命週期
 一個 Vue.js 的網頁應用程式是由各種大小的元件組成，而每個 Vue 的實體物件，實際上就是一個元件，而每個元件從建立到被銷毀，都有它的生命週期階段。
 Vue 實體的生命週期為：建立 -> 掛載 -> 更新 -> 銷毀移除
 
 
 
+# Optional API
 
 ### 基本結構
 ```javascript
