@@ -164,8 +164,28 @@ Slot 是一種內容分發（content distribution）的 API，中文翻譯為插
 
 # Vue 的生命週期
 一個 Vue.js 的網頁應用程式是由各種大小的元件組成，而每個 Vue 的實體物件，實際上就是一個元件，而每個元件從建立到被銷毀，都有它的生命週期階段。
-Vue 實體的生命週期為：建立 -> 掛載 -> 更新 -> 銷毀移除
 
+Vue 實體的生命週期為：
+建立（Creation）➡️ 掛載（Mounting）➡️ 更新（Updating）➡️ 銷毀移除（Unmounting）
+
+1. Creation：元件開始被建立的階段
+   - `beforeCreated()`：Vue 實體被建立，狀態與事件都尚未初始化
+   - `created()`：Vue 實體被建立，狀態與事件都尚未初始化
+```
+適合用於呼叫 API
+```
+
+2. Mounting：直到 Vue 完成元件跟 DOM 掛鉤，可以被渲染到 HTML 頁面上的階段
+   - `beforeMount()`：Vue 元件尚未與 DOM 掛鉤
+   - `mounted`：Vue 元件掛載完成
+
+3. Updating
+   - `beforeUpdate()`：當狀態被變動時，畫面同步更新前
+   - `updated()`：當狀態被變動時，畫面同步更新完成
+
+4. Unmounting
+   - `beforeUnmount()`：Vue 元件被銷毀前
+   - `unmounted()`：Vue 元件被銷毀完畢
 
 
 # Optional API
