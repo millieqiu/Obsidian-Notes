@@ -168,6 +168,7 @@ Slot 是一種內容分發（content distribution）的 API，中文翻譯為插
 Vue 實體的生命週期為：
 建立（Creation）➡️ 掛載（Mounting）➡️ 更新（Updating）➡️ 銷毀移除（Unmounting）
 
+*以下為 Vue 3 的寫法：*
 1. Creation：元件開始被建立的階段
    - `beforeCreated()`：Vue 實體被建立，狀態與事件都尚未初始化
    - `created()`：Vue 實體被建立，狀態與事件都尚未初始化
@@ -206,6 +207,24 @@ Vue 2 的 Optional API 寫法，雖然很簡單易懂，但隨著專案複雜度
 
 ---
 # Composition API
+
+### Composition 生命週期
+組合式 API 的生命週期函式又有不同的寫法如下：
+```javascript
+import { onMounted, onUpdated } from 'vue'
+export default {
+  name: 'HelloWorld',
+  setup() {
+    onMounted(() => console.log('Mounted'));
+    onUpdated(() => console.log('Updated'));
+    // ...
+  }
+}
+```
+至此，就==沒有 Creation 階段的 Hook Functions 了==，改用 **`setup()`** 來取代，在 `setup()` 這個函式通常會包含生命週期鉤子。
+而在 `setup()` 函式的最後，必須要把給模板解析的內容（包含狀態與事件處理方法等）透過 `return` 回傳出去。
+
+Composition API 與 Optional API 最大的差別，就是在元件的實體物件內已經不會再有 data、computed、methods 與生命週期 Hooks 等屬性。
 
 **Composition API 改善的問題**：
 -  程式能依功能分類使用，增加可讀性；
