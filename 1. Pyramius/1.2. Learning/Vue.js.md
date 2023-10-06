@@ -6,11 +6,6 @@
 
 v-model
 
-Udemy 2-5節
-Hiskio 3-10節
-xw2561@gmail.com
-2351. (公司)
-
 替換 API 的方法 (不使用jQuery)
 1. Fetch.js
 2. axios (公司較常用)
