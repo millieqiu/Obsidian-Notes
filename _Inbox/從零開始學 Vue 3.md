@@ -99,6 +99,28 @@ var vm = new Vue({
 ### Filter（過濾器）
 Vue 2 中的 Filter 功能在 Vue 3 **已被刪除**，官方建議如果需要做到篩選，可以使用「方法調用（method calls）」或計算屬性「computed」來替代。
 
+常見有兩種方法可以做到篩選功能：
+- map：`map` 方法回傳的資料與原來的資料長度相同，數值也做相應處理。
+- filter：`filter` 方法則會回傳一組新的資料。
+- [?] *map & filter 的差異*
+
+```javascript
+let arr = ["1","2","3"];
+let a = arr.map((item,index,a) =>{
+    return item + 1
+});
+
+console.log(a); //["11", "21", "31"]
+
+let b = arr.filter((item,index,a) =>{
+    return item > 1
+})
+
+console.log(b); //["2", "3"]
+```
+
+> [Vue.js 新手如何製作口罩地圖？](https://5xruby.tw/posts/how-to-create-maskmap-by-vuejs-and-osm)
+> [如何用 Vue 輕鬆篩選資料與排序](https://hackmd.io/@Zihyin/S1BW60f7q)
 
 # Component（元件基礎）
 
