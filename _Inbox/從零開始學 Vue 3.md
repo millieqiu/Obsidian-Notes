@@ -94,6 +94,12 @@ var vm = new Vue({
 
 - `prevent`：取消預設行為，類似 JavaScript 中的 `event.preventDefault()`。
 
+# Functions（功能）
+
+### Filter（過濾器）
+Vue 2 中的 Filter 功能在 Vue 3 **已被刪除**，官方建議如果需要做到篩選，可以使用「方法調用（method calls）」或計算屬性「computed」來替代。
+
+
 # Component（元件基礎）
 
 ### slot（插槽）
