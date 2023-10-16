@@ -102,7 +102,8 @@ Vue 2 中的 Filter 功能在 Vue 3 **已被刪除**，官方建議如果需要�
 常見有兩種方法可以做到篩選功能：
 - map：`map` 方法回傳的資料與原來的資料長度相同，數值也做相應處理。
 - filter：`filter` 方法則會回傳一組新的資料。
-- [?] *map & filter 的差異*
+> [!todo] map & filter 的差異
+
 
 ```javascript
 let arr = ["1","2","3"];
@@ -200,9 +201,8 @@ Vue 實體的生命週期為：
 1. Creation：元件開始被建立的階段
    - `beforeCreated()`：Vue 實體被建立，狀態與事件都尚未初始化
    - `created()`：Vue 實體被建立，狀態與事件都尚未初始化
-```
-適合用於呼叫 API
-```
+> [!note]
+> 適合用於呼叫 API
 
 2. Mounting：直到 Vue 完成元件跟 DOM 掛鉤，可以被渲染到 HTML 頁面上的階段
    - `beforeMount()`：Vue 元件尚未與 DOM 掛鉤
@@ -330,3 +330,5 @@ export default {
 
 ### 函式
 函式的宣告直接宣告在 `setup() {}` 即可。
+
+
