@@ -301,33 +301,13 @@ export default {
 ### Reactive
 如果要宣告結構變數的話就必須要使用 `reactive` ，==針對物件（Object）或陣列（Array）做雙向綁定監聽==，然後將變數放在裡面，就不需要透過 `.value` 來訪問，而 `reactive` 也必須要 import 才可以使用。
 
-``` html
-<template>
-  {{ user.id }} {{ user.name }}
-</template>
-```
-
 ```javascript
-<script>
-import { reactive } from 'vue';
+import { reactive } from 'vue'
 
-export default {
-  name: 'App',
-  setup() {
-    const user = reactive({
-      id: 0,
-      name: '',
-    });
-
-    user.id = 1;
-    user.name = 'Allan';
-
-    return {
-      user,
-    };
-  },
-};
-</script>
+const state = reactive({
+  first_name: "John",
+  last_name: "Doe",
+})
 ```
 
 > [!info]
