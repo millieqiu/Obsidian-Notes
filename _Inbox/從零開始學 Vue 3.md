@@ -262,8 +262,17 @@ Composition API 與 Optional API 最大的差別，就是在元件的實體物�
 ### 入口函式 Setup
 全新的 [`setup`](https://v3.cn.vuejs.org/api/options-composition.html#setup) 選項為一個函式，它會在元件實體尚未被建立**之前**執行，是使用 Composition API 實際位置。
 
+### script setup
+`script setup` 是 Vue 3 中所提供的語法糖，在 script 標籤加上 setup 就可以了，作用如 `setup()`一樣，所有的變數、函式 都可以直接給模板（template）使用，不需要再 `return`。
+
+### 函式
+函式的宣告直接宣告在 `setup() {}` 即可。
+
+
+## 定義資料
+
 ### Ref
-可以把 `ref` 想成就是 Vue 2 時的 `data`。
+可以把 `ref` 想成就是 Vue 2 時的 `data`，可以接受任何型態的資料，但是不會對物件或陣列內部的屬性變動做監聽。
 ```javascript
 // Vue 2 寫法
 data(): {
@@ -284,13 +293,14 @@ export default {
 }
 ```
 
-修改 `ref` 的值時必須使用 `.value`，因為 `ref` 會將該變數轉換成一個響應式的物件(意指 Proxy 物件)，因此若要修改的話則必須透過 `.value` 的方式。
+**修改 `ref` 的值時必須使用 `.value`**，因為 `ref` 會將該變數轉換成一個響應式的物件（意指 Proxy 物件），因此若要修改的話則必須透過 `.value` 的方式。
 
 -  modelValue
   當在自訂 component 使用 v-model 時，component 接收一個 modelValue 的值，然後透過觸發 `update:modelValue` 事件來更新該值。
 
 ### Reactive
-如果要宣告結構變數的話就必須要使用 `reactive` ，==針對物件或陣列做雙向綁定監聽==，然後將變數放在裡面，而初始化的時候就不用 `ref` 了。而這個 `reactive` 也必須要 import 才可以使用。
+如果要宣告結構變數的話就必須要使用 `reactive` ，==針對物件（Object）或陣列（Array）做雙向綁定監聽==，然後將變數放在裡面，就不需要透過 `.value` 來訪問，而 `reactive` 也必須要 import 才可以使用。
+
 ``` html
 <template>
   {{ user.id }} {{ user.name }}
@@ -320,15 +330,12 @@ export default {
 </script>
 ```
 
+> [!info]
+> 簡單來說，`reactive` 只能接受物件型別的內容，如果塞入非物件型別的值會出現警告（如下圖）。
+
+![[reactive-warn.png]]
 ### toRef
 
 ### toRefs
-
-
-### script setup
-`script setup` 是 Vue 3 中所提供的語法糖，在 script 標籤加上 setup 就可以了，作用如 `setup()`一樣，所有的變數、函式 都可以直接給模板（template）使用，不需要再 `return`。
-
-### 函式
-函式的宣告直接宣告在 `setup() {}` 即可。
 
 
