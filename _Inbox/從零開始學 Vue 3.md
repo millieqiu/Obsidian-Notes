@@ -272,7 +272,7 @@ Composition API 與 Optional API 最大的差別，就是在元件的實體物�
 ## 定義資料
 
 ### Ref
-可以把 `ref` 想成就是 Vue 2 時的 `data`，可以接受任何型態的資料，但是不會對物件或陣列內部的屬性變動做監聽。
+可以把 `ref` 想成就是 Vue 2 時的 `data`，==可以接受任何型態的資料==，但是不會對物件或陣列內部的屬性變動做監聽。
 ```javascript
 // Vue 2 寫法
 data(): {
@@ -295,11 +295,42 @@ export default {
 
 **修改 `ref` 的值時必須使用 `.value`**，因為 `ref` 會將該變數轉換成一個響應式的物件（意指 Proxy 物件），因此若要修改的話則必須透過 `.value` 的方式。
 
+透過以下範例，可以看到我們如何運用函式去操作 `ref` 中的值，並將其渲染到畫面上：
+```Vue
+<template>
+  <h1>{{age}}</h1>
+  <button @click="increaseAge">+ Increase age</button>
+  <button @click="decreaseAge">- Decrease age</button>
+</template>
+
+<script>
+import { ref } from 'vue'
+export default {
+  setup() {
+    const age = ref(0);
+
+    const increaseAge = () => {
+      age.value++
+    }
+
+    const decreaseAge = () => {
+      age.value--
+    }
+
+    return { age, increaseAge, decreaseAge }
+  }
+}
+</script>
+```
+在 `template` 中我們並不需要對 `age` 的變數加上 `.value` 即可讀取值，原因是當在樣板呼叫 `ref` 資料時，就會自動對其做 `unref()`。
+
 -  modelValue
   當在自訂 component 使用 v-model 時，component 接收一個 modelValue 的值，然後透過觸發 `update:modelValue` 事件來更新該值。
 
 ### Reactive
 如果要宣告結構變數的話就必須要使用 `reactive` ，==針對物件（Object）或陣列（Array）做雙向綁定監聽==，然後將變數放在裡面，就不需要透過 `.value` 來訪問，而 `reactive` 也必須要 import 才可以使用。
+
+💡在實務上，似乎將 `reactive` 運用在物件（Object）上比較多。
 
 ```javascript
 import { reactive } from 'vue'
@@ -310,10 +341,61 @@ const state = reactive({
 })
 ```
 
+以下程式碼範例，可將 `reactive` 中的資料渲染到 UI 畫面上：
+```Vue
+<template>
+  <div>{{ state.first_name }} {{ state.last_name }}</div>
+</template>
+
+<script>
+import { reactive } from 'vue'
+export default {
+  setup() {
+    const state = reactive({
+      first_name: "John",
+      last_name: "Doe",
+    })
+
+    return { state }
+  }
+}
+</script>
+```
+
+由於 `reactive` 可以監聽物件資料的變動，通過以下程式碼範例，就可以替換畫面中 `first_name` 及 `last_name` 的值：
+```Vue
+<template>
+  <div>{{ state.first_name }} {{ state.last_name }}</div>
+  <button @click="swapNames">Swap names</button>
+</template>
+
+<script>
+import { reactive } from 'vue'
+export default {
+  setup() {
+    const state = reactive({
+      first_name: "John",
+      last_name: "Doe",
+    })
+
+    const swapNames = () => {
+      state.first_name = "Naruto"
+      state.last_name = "Uzumaki"
+    }
+
+    return { state, swapNames }
+  }
+}
+</script>
+```
+
 > [!info]
 > 簡單來說，`reactive` 只能接受物件型別的內容，如果塞入非物件型別的值會出現警告（如下圖）。
 
 ![[reactive-warn.png]]
+
+> [Reactivity with the Vue 3 Composition API: ref() and reactive()](https://blog.logrocket.com/reactivity-vue-3-composition-api-ref-reactive/)
+
 ### toRef
 
 ### toRefs
