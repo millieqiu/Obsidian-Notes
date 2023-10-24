@@ -253,11 +253,19 @@ export default {
 而在 `setup()` 函式的最後，必須要把給模板解析的內容（包含狀態與事件處理方法等）透過 `return` 回傳出去。
 
 Composition API 與 Optional API 最大的差別，就是在元件的實體物件內已經不會再有 data、computed、methods 與生命週期 Hooks 等屬性。
+也就是說在 Composition API 裡，我們不需要再透過 `this` 來存取所有屬性。
 
 **Composition API 改善的問題**：
 -  程式能依功能分類使用，增加可讀性；
 -  封裝功能，可跨元件使用，增加複用性；
 -  提供更好的 TypeScript 支持。
+
+當 `setup()` 元件被啟動時，會帶入兩個參數「props」及「context」。
+
+#### props
+
+#### context
+context 裡包含了 `attrs`、`slots`、`emit` 三種屬性，
 
 ### 入口函式 Setup
 全新的 [`setup`](https://v3.cn.vuejs.org/api/options-composition.html#setup) 選項為一個函式，它會在元件實體尚未被建立**之前**執行，是使用 Composition API 實際位置。
