@@ -266,7 +266,7 @@ Composition API 與 Optional API 最大的差別，就是在元件的實體物�
 `script setup` 是 Vue 3 中所提供的語法糖，在 script 標籤加上 setup 就可以了，作用如 `setup()`一樣，所有的變數、函式 都可以直接給模板（template）使用，不需要再 `return`。
 
 ### 函式
-函式的宣告直接宣告在 `setup() {}` 即可。
+函式的宣告直接宣告在 `setup() {}` 中即可。
 
 
 ## 定義資料
