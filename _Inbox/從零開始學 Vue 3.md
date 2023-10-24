@@ -265,7 +265,9 @@ Composition API 與 Optional API 最大的差別，就是在元件的實體物�
 #### props
 
 #### context
-context 裡包含了 `attrs`、`slots`、`emit` 三種屬性，
+context 裡包含了 `attrs`、`slots`、`emit` 三種屬性。
+透過 `props` 來做父子元件的資料傳遞，將父元件的狀態或資料，**由上而下、單向傳遞**給子元件，而每次父元件的狀態或資料更新後，更新的資料會向下「流到」子元件中。
+如果想在子元件修改父元件的資料或狀態，最常見的作法，是在父元件進行監聽，等待子元件透過 `emit` 發送自訂事件，告訴父元件要更新資料或狀態。
 
 ### 入口函式 Setup
 全新的 [`setup`](https://v3.cn.vuejs.org/api/options-composition.html#setup) 選項為一個函式，它會在元件實體尚未被建立**之前**執行，是使用 Composition API 實際位置。
