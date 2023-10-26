@@ -33,3 +33,30 @@ RecordRTC.js
 2. 高亮程式碼區塊
 3. 主題樣式＆彈性客製化
 
+# Live Reload & Hot Reload
+常見的寫法：
+`import {} from ...` 靜態的 import
+
+`import()` 引入動態的東西
+`import('./aaa.js')` <- 執行時可能會抓不到檔案會造成問題
+
+// tree shaking（vite 有支援這個功能）
+編譯的過程中會去找哪些 class 有用到、哪些沒用到，來縮減檔案的容量
+`rollup` 
+
+HMR：有更新的程式碼區段才會 reload
+不是用 vite 就會自動 HMR -> 使用 HMR API
+https://vitejs.dev/guide/api-hmr.html
+
+`console.log(import.meta)` import 一組函式，runtime 會傳入的 metadata
+`console.log(import.meta.hot`
+
+HMR（Hot Module Replacement） 的好處：
+開發複雜的應用程式，有好幾個步驟，如果只修改第八個步驟的程式碼，重整後不用重頭（第一步）開始跑
+
+Rust
+編譯時間較長，因為檢查得很仔細，但編譯過了之後 Run 的速度快
+
+
+
+
