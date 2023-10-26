@@ -4,3 +4,5 @@
 解決方法：
 1. form-sizing: normal
 2. height: max-content
+
+`<textarea wrap="">`：分成 soft 跟 hard 兩種。
