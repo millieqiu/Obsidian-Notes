@@ -267,28 +267,30 @@ Composition API 與 Optional API 最大的差別，就是在元件的實體物�
 2. `emit`：從子層傳給父層
 3. `Event Bus`
 #### props 父傳子
-```JavaScript
-// ----- 父元件 -----
 
-// 從父層傳遞 myName 的變數資料為「Hazel」
-<user-detail :myName="Hazel"></user-detail>
+可以在父組件的 **屬性** 給予一個值，當作要傳送到子組件的資料。
+```HTML
+<!-- 靜態 -->
+<componentA parent-data="這是我要傳送到組件的文字" />
+
+<!-- 動態 -->
+<componentA :parent-data="userData" />
+
 ```
 
-```JavaScript
-// ----- 子元件 -----
-<template>
-<p> User Name: {{ switchName() }} </p>
-</template>
+>[!Hint] Hint
+>在屬性上的 `props` 名稱命名規則，須使用 kebab-case (烤肉串)，不可以使用 camelCase (駱峰)。
 
+接著，在子組件可以宣告 `props` 接收來自父組件的數據。
+```JavaScript
+<!-- 子組件 -->
+<script>
 export default {
-    props: ['myName'], // 用 props 定義要從父層接收資料的變數
-    methods: {
-        switchName(){
-	        // 可以直接在函式內引用變數
-            return this.myName.split('').reverse().join('')
-        }
-    }
-}
+  name: "HelloWorld",
+  props: ["parentData", "data"],
+};
+</script>
+
 ```
 
 Prop 還能夠驗證資料型態，比如說在子元件下我們可以這樣寫：
@@ -302,8 +304,35 @@ props: {
 }
 ```
 
-#### emit 子傳父
+在使用 Props 時，必須注意==單向資料流==的概念，意即不能隨便改動子組件接受到的 `props` 資料值，避免資料流錯亂、難以被理解。若有 props 數據更新需求，應該由父組件操作。
 
+#### $emit 子傳父
+
+子組件可以使用 `$emit` 來發射一個「客製事件」給父組件，有兩種方法。
+```JavaScript
+
+// 1. 子組件客製事件設置
+export default {
+  methods: {
+    submit() {
+      this.$emit('someEvent', newData)
+    }
+  }
+}
+
+// 2. 可以直接寫在 click 上
+<button @click="$emit('someEvent', newValue)">UPDATE DATE</button>
+
+```
+
+父組件可以使用 `v-on(@)` 監聽由子組件傳送的客製事件。
+```HTML
+// 父組件
+<template>
+  <MyComponent @some-event="(newValue) => count = newValue" />
+</template>
+
+```
 
 #### context
 context 裡包含了 `attrs`、`slots`、`emit` 三種屬性。
