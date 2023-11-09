@@ -24,3 +24,15 @@ defineExpose 最好只拋出去一個 function，讓元件的狀態在哪裡，�
 Render Function > 在開發套件時較常使用
 
 vapor mode
+
+---
+
+# Day 2
+
+## 模組化前端開發：從亂七八糟到組織有序
+Vite 不是 Vue 專屬的，也不是打包工具
+
+esbuild <- Vite -> Rollup
+
+`type="importmap"`
+類似 CDN，但==不需要打包==，擺脫 node_modules
