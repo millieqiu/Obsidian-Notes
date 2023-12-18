@@ -2,7 +2,15 @@
 # 基本
 ## push()
 `push()` 可以將某些值加入到陣列的**最後**一個位置，不限制添加數量，欲添加的內容使用逗號隔開即可，加入後陣列長度會增加。
-使用`push()` 後會改變原本的陣列內容。
+使用`push()` 後會改變原本的陣列內容，並回傳一個該陣列的 `legnth`。
+```javascript
+var sports = ["soccer", "baseball"];
+var total = sports.push("football", "swimming");
+
+console.log(sports); // ['soccer', 'baseball', 'football', 'swimming']
+console.log(total); // 4
+// 新的長度以變數 total 表示。
+```
 
 ## pop()
 `pop()` 會移除（取出）陣列的**最後**一個元素。
@@ -19,7 +27,7 @@
 ## splice()
 `splice()` 可以移除或新增陣列的元素，它包含了三個參數。
 第一個是要移除或要添加的序列號碼（必填），第二個是要移除的長度（選填，若不填則第一個號碼位置後方的所有元素都會被移除，若設定為 0 則不會有元素被移除），第三個是要添加的內容（選填）。
-會改變原陣列的內容。
+會**改變原陣列**的內容。
 ```javascript
 let a = [1, 2, 3, 4, 5, 6, 7, 8;
 a.splice(5, 1);
@@ -28,6 +36,11 @@ console.log(a);
 // [1, 2, 3, 4, 5, 7, 8]
 ```
 
+## slice()
+語法：`ary.slice(begin, end)`
+- 參數 begin 表示開始擷取的索引位置 (索引值從 0 開始)，預設是 0。
+- 參數 end 表示結束擷取的索引位置，擷取的範圍不包含 end 元素；如果 end 是負數，表示從陣列後面算起，例如 -1 表示最後一個元素的位置。
+- `slice()` 方法**返回一個新的陣列**。
 
 # 進階
 ## Array.filter()
