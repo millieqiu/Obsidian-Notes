@@ -27,6 +27,23 @@ obj.show = function() {
 };
 ```
 
+物件取值的方式有兩種，用**點語法**或是**中括號**：
+```javascript
+var obj = {
+  myName: 'Ray',
+  num: 1,
+  family: {
+    mon: '漂亮阿姨',
+  },
+  objFn: function() {
+    console.log('漂亮阿姨回家囉');
+  },
+}
+```
+透過點運算子假使我們要取得 `myName` 只需要寫 `obj.myName` 即可。
+而中括號取值方式則是 `obj['myName']` 中括號取值裡面是使用字串的方式去取值，使用中括號取值的方式還有另一個好處，可以傳入變數來取值。
+
+
 ## 陣列 (Array)
 JavaScript 內建物件的一種，是可依照**順序**存放資料的容器，利用有順序的編號來管理內部資料。
 
