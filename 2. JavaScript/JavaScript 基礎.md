@@ -70,7 +70,9 @@ document.querySelector 只會選取第一個符合的元素，如果要選取多
 ![[parameter&argumenet.png]]
 
 用匿名是函式是因為它只會用到一次，詳情：
-使用匿名函式的時機
+使用匿名函式的時機 -> 如果某個函式裡執行的很複雜，不想影響到外部。
+var a = function () ...
+`a` 的作用域在哪，function 的範圍就在哪。
 https://hackmd.io/@pikachuchu/rk7a2uLTd
 
 # Arrow Function 箭頭函式
