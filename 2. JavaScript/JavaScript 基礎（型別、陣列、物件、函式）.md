@@ -85,7 +85,7 @@ https://hackmd.io/@pikachuchu/rk7a2uLTd
 
 ###### Arrow Functions 使用的注意事項
 ---
-1. 沒有 Hoisting 效果
+1. ==沒有 Hoisting 效果==
 Arrow Functions 是表達式的語法形式，就像函式表達式 (Function Expression) 那樣，函數定義的部分不會被 Hoist。換言之，**定義必須寫在使用之前**。
 ```JavaScript
 console.log( sayHello );    //undefined
