@@ -75,6 +75,10 @@ var a = function () ...
 `a` 的作用域在哪，function 的範圍就在哪。
 https://hackmd.io/@pikachuchu/rk7a2uLTd
 
+## 2023/12/28
+`return` 後函式就會中斷執行。
+如果有很多個 if 判斷，可以直接
+
 # Arrow Function 箭頭函式
 ###### Arrow Functions 小檔案
 ---
