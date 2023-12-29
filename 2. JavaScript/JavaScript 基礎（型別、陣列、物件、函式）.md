@@ -77,7 +77,7 @@ https://hackmd.io/@pikachuchu/rk7a2uLTd
 
 ## 2023/12/28
 `return` 後函式就會中斷執行。
-如果有很多個 if 判斷，可以直接
+如果有很多個 if 判斷，可以用 return 中斷（以免最前面就出錯 / false 了，還一定要執行完全不的函式）
 
 # Arrow Function 箭頭函式
 ###### Arrow Functions 小檔案
