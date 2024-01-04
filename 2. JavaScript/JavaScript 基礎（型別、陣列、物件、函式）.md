@@ -70,6 +70,8 @@ document.querySelector 只會選取第一個符合的元素，如果要選取多
 - `innerHTML`：早期動態產生內容時都是使用這個，但風險是容易遭到「跨網站指令碼攻擊（XSS）」。
 >[零基礎資安系列（二）-認識 XSS（Cross-Site Scripting）](https://tech-blog.cymetrics.io/posts/jo/zerobased-cross-site-scripting/)
 
+在 form 裡面的第一個 button 如果沒有打 `type=button` 就會預設變成送出表單 `submit`
+
 # Function 函式
 「函式」指的是將一或多段程式指令包裝起來，可以重複使用並方便維護。
 
