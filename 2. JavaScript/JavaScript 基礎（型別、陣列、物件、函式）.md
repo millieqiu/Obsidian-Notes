@@ -72,6 +72,9 @@ document.querySelector 只會選取第一個符合的元素，如果要選取多
 
 在 form 裡面的第一個 button 如果沒有打 `type=button` 就會預設變成送出表單 `submit`
 
+### `onclick` v.s. `addEventListener` 差異
+
+
 # Function 函式
 「函式」指的是將一或多段程式指令包裝起來，可以重複使用並方便維護。
 
