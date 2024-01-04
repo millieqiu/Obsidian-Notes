@@ -66,6 +66,10 @@ document.querySelector 只會選取第一個符合的元素，如果要選取多
 - window 的 `innerHeight` 跟 `outerHeight`
 - document 的 `clientHeight`、`offsetHeight`、`scrollHeight`
 
+- `textContent`：
+- `innerHTML`：早期動態產生內容時都是使用這個，但風險是容易遭到「跨網站指令碼攻擊（XSS）」。
+>[零基礎資安系列（二）-認識 XSS（Cross-Site Scripting）](https://tech-blog.cymetrics.io/posts/jo/zerobased-cross-site-scripting/)
+
 # Function 函式
 「函式」指的是將一或多段程式指令包裝起來，可以重複使用並方便維護。
 
