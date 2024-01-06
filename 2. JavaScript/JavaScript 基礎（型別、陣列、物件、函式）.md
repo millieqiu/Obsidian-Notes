@@ -75,6 +75,7 @@ document.querySelector 只會選取第一個符合的元素，如果要選取多
 ### `onclick` v.s. `addEventListener` 差異
 
 
+
 # Function 函式
 「函式」指的是將一或多段程式指令包裝起來，可以重複使用並方便維護。
 
