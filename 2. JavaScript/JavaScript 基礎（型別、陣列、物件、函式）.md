@@ -127,7 +127,7 @@ var square = new Function('number', 'return number * number');
 ```
 透過 `new Function` 所建立的函式物件，運作效能較差，所以通常實務上也較少會這樣做。
 
-### 函式作用域
+## 函式作用域
 Function 擁有自己的作用域，可以在函數內定義的任何變數（local variable），且只有在函數裡面才可以存取到這個變數。
 在函數裡面除了可以存取到局部變數（local variable），也可以存取到全域變數（global variable）。
 ```javascript
@@ -195,6 +195,7 @@ https://hackmd.io/@pikachuchu/rk7a2uLTd
 - 如果有很多個 if 判斷，可以用 return 中斷，以免最前面就出錯（判斷出 false）了，還一定要執行完全不的函式。
 
 >[重新認識 JavaScript: Day 10 函式 Functions 的基本概念](https://ithelp.ithome.com.tw/articles/10191549)
+
 ## Arrow Function 箭頭函式
 ### Arrow Functions 小檔案
 ---
@@ -206,7 +207,7 @@ https://hackmd.io/@pikachuchu/rk7a2uLTd
 ### Arrow Functions 使用的注意事項
 ---
 1. ==沒有 Hoisting 效果==
-Arrow Functions 是表達式的語法形式，就像函式表達式 (Function Expression) 那樣，函數定義的部分不會被 Hoist。換言之，**定義必須寫在使用之前**。
+Arrow Functions 是表達式的語法形式，就像函式表達式 (Function Expression) 那樣，函數定義的部分不會被提升。換言之，**定義必須寫在使用之前**。
 ```JavaScript
 console.log( sayHello );    //undefined
 console.log( sayHello() );  // TypeError: sayHello is not a function
