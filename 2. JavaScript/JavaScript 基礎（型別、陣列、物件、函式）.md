@@ -219,3 +219,4 @@ var sayHello = () => `Hello OneJar!`;
 前面介紹 `this` 時，提到判斷 `this` 代表什麼物件的大原則：**看呼叫時的物件是誰**；Arrow Functions 的 `this` 和傳統函數的一個重大差異就是看的是**語彙位置**。
 傳統函數每次呼叫函數，都會建立一個新的函數執行環境 (Function Execution Context)，然後建立一個新的 `this` 引用物件，指向當下的呼叫者。
 而 Arrow Functions 則不會有自己的 `this` 引用物件，呼叫 `this` 時，會沿用語彙環境外圍的 `this`。
+
