@@ -121,7 +121,7 @@ arr.forEach((item, index, arr) => { arr[index] = item * 10; });
 console.log(a);
 // [10, 20, 30, 40, 50]
 ```
-
+forEach 可以寫 `return` ，但結束的是**子** function，不會中斷整個 forEach 操作。
 
 ## Array.includes()
 `Array.includes` 會接收一個值，然後判斷該值有沒有在 array 中，有的話就回傳 true，否則回傳 false。使用方法如下：
