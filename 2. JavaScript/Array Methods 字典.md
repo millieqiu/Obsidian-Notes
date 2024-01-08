@@ -122,6 +122,7 @@ console.log(a);
 // [10, 20, 30, 40, 50]
 ```
 
+
 ## Array.includes()
 `Array.includes` 會接收一個值，然後判斷該值有沒有在 array 中，有的話就回傳 true，否則回傳 false。使用方法如下：
 ```javascript
