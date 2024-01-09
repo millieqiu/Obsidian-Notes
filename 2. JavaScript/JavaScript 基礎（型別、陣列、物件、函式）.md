@@ -73,6 +73,7 @@ document.querySelector 只會選取第一個符合的元素，如果要選取多
 在 form 裡面的第一個 button 如果沒有打 `type=button` 就會預設變成送出表單 `submit`
 
 ### `onclick` v.s. `addEventListener` 差異
+https://www.geeksforgeeks.org/difference-between-addeventlistener-and-onclick-in-javascript/
 
 
 
